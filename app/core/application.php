@@ -23,9 +23,7 @@ class Application
 
             if(method_exists($this->controller,$this->action))
             {
-
                 call_user_func_array([$this->controller,$this->action],$this->params);
-                
             }
         }
 

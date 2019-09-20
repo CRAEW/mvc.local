@@ -11,10 +11,13 @@ class Controller
         return $this->view;
     }
 
-    public function model($modelName, $data)
+    public function model($modelName, $data=[])
     {
-        $this->model = $model;
-        return $this->model;
+        if(file_exists(MODEL .$modelName . '.php'))
+        {
+            require MODEL .$modelName . '.php';
+            $this->model = new $modelName;
+        }
     }
 }
 

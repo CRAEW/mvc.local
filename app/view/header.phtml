@@ -1,6 +1,7 @@
 <?php
 
     $action = $this->getAction();
+    var_dump($action);
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,8 @@
 <body>
     <nav class='main-nav'>
         <ul>
-            <li><a href="/home/index" <?php echo ($action == 'index' ? 'class=active' : ''); ?>>Home</a></li>
-            <li><a href="/home/aboutus" <?php echo ($action == 'aboutus' ? 'class=active' : ''); ?>>About Us</a></li>
+            <li><a href="/home/index" <?php echo ($action == 'home/index' ? 'class=active' : ''); ?>>Home</a></li>
+            <li><a href="/home/aboutus" <?php echo ($action == 'home/aboutus' ? 'class=active' : ''); ?>>About Us</a></li>
+            <li><a href="/car/index" <?php echo ($action == 'car/index' ? 'class=active' : ''); ?>>Carlist</a></li>
         </ul>
     </nav>

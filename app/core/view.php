@@ -21,7 +21,8 @@ class View
 
     public function getAction()
     {
-        return(explode('/', $this->view_file)[1]);
+        //return(explode('/', $this->view_file));
+        return $this->view_file;
     }
 }
 
